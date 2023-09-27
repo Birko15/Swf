@@ -1,38 +1,29 @@
-<!doctype html>
-<html>
-<script>
-    window.RufflePlayer = window.RufflePlayer || {};
 
-    window.addEventListener("DOMContentLoaded", () => {
-        let ruffle = window.RufflePlayer.newest();
-        let player = ruffle.createPlayer();
-        let container = document.getElementById("container");
-        container.appendChild(player);
-        player.load("movie.swf");
-	player.style.width = "800px"; player.style.height = "600px";
-    });
-</script>
-<script src="path/to/ruffle/ruffle.js"></script>
-  <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
-	    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+
+
+<head>
+	 <title>
+   Jelly people
+  </title>
+
+</head>
+
   <body>
-		<header>
-			<img class="logo" src="img/logo2.png" alt="logo">
-   	  <h1>Header.</h1>
-      <nav>
-          <ul class="nav__links">
-						<button style="margin-right: 20px;" onclick="window.location.href='index.html'";">Home</button>
-							
-            <button onclick="window.location.href='info.html'";>Information</button>
-						
-          </nav>
-						</header>
-  <head>
-    <title>JellyBattle</title>
-  </head>
-		<center>
-			<p>Click <a href="https://github.com/Zomb1rbro/flsh/raw/master/Jelly%20battle/shell2.swf">Here</a> to download the file and right click to go to fullscreen.</p>
-    	<embed src="https://cdn.jsdelivr.net/gh/Zomb1rbro/Swf@main/shell2.swf"></embed>
-		</center>
-  </body>
+    
+	  <style> body {background-color: #586F82 }</style>
+  <!-- Div content -->
+<div style="margin:0 auto;text-align:center">
+     <embed src="shell2.swf" width="700" height="600"> </embed>
+      <!-- Div align in the middle -->
+      <div style="margin-left:auto;margin-right:auto;text-align:center">
+         
+      </div>
+
+</div>
+    
+
+   <script src="ruffle.js"></script>
+
+</body>
+</html>
