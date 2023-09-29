@@ -27,33 +27,9 @@
         player.load("movie.swf");
 	compatibilityRules?: true
 	polyfills?: true
-		
-(function (originalFetch) {
-	const changeUrl = function (url) {
-		//TODO: Check url parameter and modify as needed
-		return url;
-	};
-	window.fetch = function () {
-		let a = Array.from(arguments);
-		if (typeof(a[0]) === "string") {
-			//Argument to fetch() call is a raw URL string
-			a[0] = changeUrl(a[0]);
-		} else if (a[0] && typeof(a[0].url) === "string") {
-			//Argument to fetch() call is a request object
-			//HACK: This replaces the entire request object with an URL
-			//      because the Request.url property is readonly.
-			//      This is appropriate for GET requests only.
-			const changedUrl = changeUrl(a[0].url);
-			if (changedUrl !== a[0].url) {
-				a[0] = changedUrl;
-			}
-		}
-		return originalFetch.apply(window, a);
-	};
-})(window.fetch);
-
-
+		preloader?: true
     });
+
 </script>
 <script src="Ruffle/ruffle.js"></script>
 	
