@@ -15,7 +15,18 @@
   <!-- Div content -->
 <div style="margin:0 auto;text-align:center">
      <embed src="https://cdn.jsdelivr.net/gh/Birko15/Swf@main/shell2.swf" width="700" height="600"> </embed>
-	<script src="/Ruffle/ruffle.js"></script>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("movie.swf");
+    });
+</script>
+<script src="/Ruffle/ruffle.js"></script>
       <!-- Div align in the middle -->
       <div style="margin-left:auto;margin-right:auto;text-align:center">
          
